@@ -41,6 +41,10 @@ PRODUCT_COPY_FILES += device/htc/fireball/configs/AudioBTIDnew.csv:system/etc/Au
 # QC thermald config
 PRODUCT_COPY_FILES += device/htc/msm8960-common/configs/thermald.conf:system/etc/thermald.conf
 
+# vold config
+PRODUCT_COPY_FILES += \
+    device/htc/fireball/configs/vold.fstab:system/etc/vold.fstab
+
 # wifi config
 PRODUCT_COPY_FILES += \
     device/htc/fireball/configs/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf
@@ -108,8 +112,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 $(call inherit-product-if-exists, vendor/htc/fireball/fireball-vendor.mk)
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := fireball
 PRODUCT_DEVICE := fireball
+PRODUCT_NAME := fireball
 PRODUCT_BRAND := htc
 PRODUCT_MODEL := Incredible 4G LTE
 PRODUCT_MANUFACTURER := HTC
