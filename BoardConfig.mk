@@ -1,4 +1,28 @@
-USE_CAMERA_STUB := true
+# Copyright (C) 2009 The Android Open Source Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+#
+# This file sets variables that control the way modules are built
+# thorughout the system. It should not be used to conditionally
+# disable makefiles (the proper mechanism to control what gets
+# included in a build is to use PRODUCT_PACKAGES in a product
+# definition file).
+#
+
+# WARNING: This line must come *before* including the proprietary
+# variant, so that it gets overwritten by the parent (which goes
+# against the traditional rules of inheritance).
 
 # inherit from common msm8960
 -include device/htc/msm8960-common/BoardConfigCommon.mk
@@ -7,45 +31,57 @@ USE_CAMERA_STUB := true
 TARGET_BOOTLOADER_BOARD_NAME := fireball
 
 # Kernel
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 # androidboot.hardware=fighter
 BOARD_KERNEL_BASE := 0x80400000
-BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8
 BOARD_FORCE_RAMDISK_ADDRESS := 0x81800000
+BOARD_KERNEL_PAGESIZE := 2048
 
-TARGET_PREBUILT_KERNEL := device/htc/fireball/kernel
-# TARGET_KERNEL_SOURCE := kernel/htc/msm8960
-# TARGET_KERNEL_CONFIG := fireball_defconfig
+# TARGET_PREBUILT_KERNEL := device/htc/fireball/kernel
+TARGET_KERNEL_CONFIG := fireball_defconfig
+TARGET_KERNEL_SOURCE := kernel/htc/msm8960
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 960
+TARGET_SCREEN_WIDTH := 540
 
 # Lights
 TARGET_PROVIDES_LIBLIGHTS := true
 
-# Filesystem (cat /proc/emmc)
-BOARD_BOOTIMAGE_PARTITION_SIZE := 0x01000000
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x00fffe00
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x47fffc00
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x49fffe00
-BOARD_FLASH_BLOCK_SIZE := 131072
+# HTCLOG
+COMMON_GLOBAL_CFLAGS += -DHTCLOG
 
-# Recovery: set either cwm or twrp
-TARGET_RECOVERY_INITRC := device/htc/fireball/recovery/init-cwm.rc
-
-# Use power button as select in recovery
-BOARD_HAS_NO_SELECT_BUTTON := true
-
-# Board has an ext4 partition larger than 2gb
-BOARD_HAS_LARGE_FILESYSTEM := true
-
-# TWRP
-DEVICE_RESOLUTION := 540x960
-TW_FLASH_FROM_STORAGE := true
-TW_DEFAULT_EXTERNAL_STORAGE := true
-TW_INTERNAL_STORAGE_PATH := "/sdcard"
-TW_INTERNAL_STORAGE_MOUNT_POINT := "sdcard"
-TW_EXTERNAL_STORAGE_PATH := "/external_sd"
-TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
-TW_INCLUDE_DUMLOCK := true
+# Use libril in the device tree
+BOARD_PROVIDES_LIBRIL := true
 
 # Vold
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
+#cat /proc/emmc
+#dev:        size     erasesize name
+#mmcblk0p23: 000ffa00 00000200 "misc"
+#mmcblk0p22: 00fffe00 00000200 "recovery"
+#mmcblk0p21: 01000000 00000200 "boot"
+#mmcblk0p33: 47fffc00 00000200 "system"
+#mmcblk0p30: 00140200 00000200 "local"
+#mmcblk0p34: 13fffe00 00000200 "cache"
+#mmcblk0p35: 49fffe00 00000200 "userdata"
+#mmcblk0p26: 01400000 00000200 "devlog"
+#mmcblk0p28: 00040000 00000200 "pdata"
+#mmcblk0p36: 109c00000 00000200 "fat"
+#mmcblk0p31: 00010000 00000200 "extra"
+#mmcblk0p17: 02d00000 00000200 "radio"
+#mmcblk0p18: 00a00000 00000200 "adsp"
+#mmcblk0p16: 00100000 00000200 "dsps"
+#mmcblk0p19: 00500000 00000200 "wcnss"
+#mmcblk0p20: 007ffa00 00000200 "radio_config"
+#mmcblk0p24: 00400000 00000200 "modem_st1"
+#mmcblk0p25: 00400000 00000200 "modem_st2"
+
+# Filesystem
+TARGET_USERIMAGES_USE_EXT4 := true
+BOARD_BOOTIMAGE_PARTITION_SIZE := 0x01000000
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x00fffe00
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x47fffc00
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x49fffe00
+BOARD_FLASH_BLOCK_SIZE := 131072
