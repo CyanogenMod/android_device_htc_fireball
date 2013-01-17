@@ -16,7 +16,7 @@ init.fighter.rc, init.fighter.usb.rc, ueventd.fighter.rc: all of these are from 
 
 ### extract-files.sh
 
-There are a number of files specified in msm8960-common which do not exist in the stock ROM and cannot be extracted from the phone.  An incomplete list:
+There are a number of files specified in msm8960-common which do not exist in the stock ROM and cannot be extracted from the phone:
 
 1.  bin/cand
 2.  lib/egl/libGLESv2S3D_adreno200.so
@@ -25,3 +25,7 @@ There are a number of files specified in msm8960-common which do not exist in th
 5.  etc/firmware/modem*
 6.  etc/firmware/q6*
 7.  etc/firmware/wcnss*
+
+### system.prop
+
+This is the stock system.prop.  The fat needs to be trimmed
