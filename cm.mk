@@ -1,4 +1,4 @@
-# Specify phone tech before including full_phone
+## Specify phone tech before including full_phone
 $(call inherit-product, vendor/cm/config/gsm.mk)
 
 # Release name
@@ -10,12 +10,9 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 # Inherit device configuration
 $(call inherit-product, device/htc/fireball/device_fireball.mk)
 
-# Device naming
+## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := fireball
 PRODUCT_NAME := cm_fireball
 PRODUCT_BRAND := htc
-PRODUCT_MODEL := Incredible 4G LTE
+PRODUCT_MODEL := fireball
 PRODUCT_MANUFACTURER := htc
-
-# Set build fingerprint / ID / Product Name ect.
-
