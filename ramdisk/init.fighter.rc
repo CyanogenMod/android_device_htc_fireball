@@ -25,7 +25,7 @@ on fs
     mkdir /tombstones/lpass 0771 system system
 
     # mount all the things
-    mount_all fstab.jet
+    mount_all fstab.fighter
 
     # for NFC
     symlink /system/vendor/pittpatt /vendor/pittpatt

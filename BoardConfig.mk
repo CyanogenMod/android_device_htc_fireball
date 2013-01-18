@@ -38,7 +38,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 
 # TARGET_PREBUILT_KERNEL := device/htc/fireball/kernel
 TARGET_KERNEL_CONFIG := fighter_defconfig
-TARGET_KERNEL_SOURCE := kernel/htc/msm8960
+TARGET_KERNEL_SOURCE := kernel/htc/iv-msm8960
 
 # Lights
 TARGET_PROVIDES_LIBLIGHTS := true
