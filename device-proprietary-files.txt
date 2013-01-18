@@ -16,14 +16,6 @@ lib/libchromatix_s5k6a1gx_zsl.so
 lib/hw/nfc.fighter.so
 vendor/firmware/libpn544_fw.so
 
-# Radio
-#lib/libhtc_rilhook.so
-
 # Sensors
-#lib/hw/sensors.jet.so
-#lib/libimu.so
-#lib/libmlplatform.so
-#lib/libmllite.so
-#lib/libMLTransition.so
-#lib/libmpl.so
-#lib/libmpl_jni.so
+lib/hw/sensors.msm8960.so
+
