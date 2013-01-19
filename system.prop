@@ -191,9 +191,3 @@ wifi.softap.interface=wlan0
 wifi.softapconcurrent.interface=softap.0
 ro.product.wifi = 802.11 a/b/g/n
 
-### EXTRA BUILD PARAMETERS
-
-ro.secure=0
-ro.debuggable=1
-persist.service.adb.enable=1
-
