@@ -191,3 +191,8 @@ wifi.softap.interface=wlan0
 wifi.softapconcurrent.interface=softap.0
 ro.product.wifi = 802.11 a/b/g/n
 
+# NFC
+debug.nfc.fw_download=true
+debug.nfc.fw_boot_download=false
+debug.nfc.se=true
+ro.nfc.port=I2C
