@@ -93,10 +93,6 @@ PRODUCT_COPY_FILES += \
     device/htc/fireball/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc \
     device/htc/fireball/idc/tv-touchscreen.idc:system/usr/idc/tv-touchscreen.idc
 
-# GPS
-#PRODUCT_PACKAGES += \
-#    gps.fireball \
-
 # Torch
 PRODUCT_PACKAGES += \
     Torch
