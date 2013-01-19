@@ -38,16 +38,9 @@ PRODUCT_COPY_FILES += \
 # HTC BT audio config
 PRODUCT_COPY_FILES += device/htc/fireball/configs/AudioBTIDnew.csv:system/etc/AudioBTIDnew.csv
 
-# QC thermald config
-PRODUCT_COPY_FILES += device/htc/msm8960-common/configs/thermald.conf:system/etc/thermald.conf
-
 # vold config
 PRODUCT_COPY_FILES += \
     device/htc/fireball/configs/vold.fstab:system/etc/vold.fstab
-
-# wifi config
-PRODUCT_COPY_FILES += \
-    device/htc/fireball/configs/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf
 
 # Sound configs
 PRODUCT_COPY_FILES += \
@@ -114,6 +107,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Torch
 
+# Filesystem management tools
+PRODUCT_PACKAGES += \
+   make_ext4fs \
+   e2fsck \
+   setup_fs
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
@@ -123,6 +122,11 @@ PRODUCT_COPY_FILES += \
 
 # Set build date
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
+
+# Device uses high-density artwork where available
+PRODUCT_AAPT_CONFIG := normal hdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
+PRODUCT_LOCALES += en_US hdpi
 
 # call the proprietary setup
 $(call inherit-product-if-exists, vendor/htc/fireball/fireball-vendor.mk)
