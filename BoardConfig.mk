@@ -38,7 +38,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 
 # TARGET_PREBUILT_KERNEL := device/htc/fireball/kernel
 TARGET_KERNEL_CONFIG := fighter_defconfig
-TARGET_KERNEL_SOURCE := kernel/htc/iv-msm8960
+TARGET_KERNEL_SOURCE := kernel/htc/msm8960
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/fireball/bluetooth
