@@ -43,14 +43,8 @@ TARGET_KERNEL_SOURCE := kernel/htc/iv-msm8960
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/fireball/bluetooth
 
-# Lights
-TARGET_PROVIDES_LIBLIGHTS := true
-
 # HTCLOG
 COMMON_GLOBAL_CFLAGS += -DHTCLOG
-
-# Use libril in the device tree
-BOARD_PROVIDES_LIBRIL := true
 
 # Vold
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
