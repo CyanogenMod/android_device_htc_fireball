@@ -40,14 +40,11 @@ BOARD_KERNEL_PAGESIZE := 2048
 TARGET_KERNEL_CONFIG := fighter_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/iv-msm8960
 
-# Lights
-TARGET_PROVIDES_LIBLIGHTS := true
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/fireball/bluetooth
 
 # HTCLOG
 COMMON_GLOBAL_CFLAGS += -DHTCLOG
-
-# Use libril in the device tree
-BOARD_PROVIDES_LIBRIL := true
 
 # Vold
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true

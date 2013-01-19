@@ -38,16 +38,9 @@ PRODUCT_COPY_FILES += \
 # HTC BT audio config
 PRODUCT_COPY_FILES += device/htc/fireball/configs/AudioBTIDnew.csv:system/etc/AudioBTIDnew.csv
 
-# QC thermald config
-PRODUCT_COPY_FILES += device/htc/msm8960-common/configs/thermald.conf:system/etc/thermald.conf
-
 # vold config
 PRODUCT_COPY_FILES += \
     device/htc/fireball/configs/vold.fstab:system/etc/vold.fstab
-
-# wifi config
-PRODUCT_COPY_FILES += \
-    device/htc/fireball/configs/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf
 
 # Sound configs
 PRODUCT_COPY_FILES += \
@@ -93,23 +86,53 @@ PRODUCT_COPY_FILES += \
     device/htc/fireball/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc \
     device/htc/fireball/idc/tv-touchscreen.idc:system/usr/idc/tv-touchscreen.idc
 
-# GPS
-#PRODUCT_PACKAGES += \
-#    gps.fireball \
+# NFCEE access control
+ifeq ($(TARGET_BUILD_VARIANT),user)
+    NFCEE_ACCESS_PATH := device/htc/fireball/configs/nfcee_access.xml
+else
+    NFCEE_ACCESS_PATH := device/htc/fireball/configs/nfcee_access_debug.xml
+endif
+PRODUCT_COPY_FILES += \
+    $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
+
+# NFC Support
+PRODUCT_PACKAGES += \
+    libnfc \
+    libnfc_jni \
+    Nfc \
+    Tag \
+    com.android.nfc_extras
 
 # Torch
 PRODUCT_PACKAGES += \
     Torch
 
+# Filesystem management tools
+PRODUCT_PACKAGES += \
+   make_ext4fs \
+   e2fsck \
+   setup_fs
+
 # Permissions
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml
+    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
+    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
+    frameworks/base/nfc-extras/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
+    frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml
 
 # Set build date
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
+# Device uses high-density artwork where available
+PRODUCT_AAPT_CONFIG := normal hdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
+PRODUCT_LOCALES += en_US hdpi
+
 # call the proprietary setup
 $(call inherit-product-if-exists, vendor/htc/fireball/fireball-vendor.mk)
+
+# call dalvik heap config
+$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 # Discard inherited values and use our own instead.
 PRODUCT_DEVICE := fireball
