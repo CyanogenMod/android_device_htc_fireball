@@ -22,11 +22,9 @@ $(call inherit-product, device/htc/msm8960-common/msm8960.mk)
 DEVICE_PACKAGE_OVERLAYS += device/htc/fireball/overlay
 
 # Boot ramdisk setup
-PRODUCT_COPY_FILES += \
-    device/htc/fireball/ramdisk/init.fighter.rc:root/init.fighter.rc \
-    device/htc/fireball/ramdisk/init.fighter.usb.rc:root/init.fighter.usb.rc \
-    device/htc/fireball/ramdisk/ueventd.fighter.rc:root/ueventd.fighter.rc \
-    device/htc/fireball/ramdisk/fstab.fighter:root/fstab.fighter
+PRODUCT_PACKAGES += \
+    fstab.fighter \
+    init.qcom.rc
 
 # recovery and custom charging
 PRODUCT_COPY_FILES += \
