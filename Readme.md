@@ -2,4 +2,5 @@
 
 Instead of running these scripts, get the proprietary libraries and makefiles from [here](https://github.com/mdmower/htc-fireball-vendor).
 
-### ril still needs work
+### Known Issues:
+Settings > Storage crashes
