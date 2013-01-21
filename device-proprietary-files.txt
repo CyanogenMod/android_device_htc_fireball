@@ -13,9 +13,8 @@ lib/libchromatix_s5k6a1gx_preview.so
 lib/libchromatix_s5k6a1gx_zsl.so
 
 # NFC
-lib/hw/nfc.fighter.so
+lib/hw/nfc.default.so
 vendor/firmware/libpn544_fw.so
 
 # Sensors
 lib/hw/sensors.msm8960.so
-
