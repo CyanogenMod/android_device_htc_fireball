@@ -24,7 +24,7 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/fireball/overlay
 # Boot ramdisk setup
 PRODUCT_PACKAGES += \
     fstab.fighter \
-    init.qcom.rc
+    init.target.rc
 
 # recovery and custom charging
 PRODUCT_COPY_FILES += \
@@ -117,6 +117,28 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
     frameworks/base/nfc-extras/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml
+
+# Verizon CDMA properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.google.clientidbase=android-htc \
+    ro.com.google.clientidbase.yt=android-htc \
+    ro.com.google.clientidbase.am=android-verizon \
+    ro.com.google.clientidbase.vs=android-verizon \
+    ro.com.google.clientidbase.gmm=android-verizon \
+    ro.com.google.clientidbase.ms=android-verizon \
+    ro.com.google.locationfeatures=1 \
+    ro.cdma.home.operator.numeric=310012 \
+    ro.cdma.home.operator.alpha=Verizon \
+    gsm.sim.operator.alpha=Verizon \
+    gsm.sim.operator.numeric=310012 \
+    gsm.sim.operator.iso-country=us \
+    gsm.operator.alpha=Verizon \
+    gsm.operator.numeric=310012 \
+    gsm.operator.iso-country=us \
+    ro.carrier=Verizon
+
+# We have enough space to hold precise GC data
+PRODUCT_TAGS += dalvik.gc.type-precise
 
 # Set build date
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
