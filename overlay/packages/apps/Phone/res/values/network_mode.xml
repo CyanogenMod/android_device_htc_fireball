@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- Network modes from:
+     frameworks/base/telephony/java/com/android/internal/telephony/RILConstants.java
+
+     0: GSM/WCDMA (WCDMA preferred)
+     1: GSM only
+     2: WCDMA only
+     3: GSM/WCDMA (auto mode, according to PRL)
+     4: CDMA and EvDo (auto mode, according to PRL)
+     5: CDMA only
+     6: EvDo only
+     7: GSM/WCDMA, CDMA, and EvDo (auto mode, according to PRL)
+     8: LTE, CDMA and EvDo
+     9: LTE, GSM/WCDMA
+     10: LTE, CDMA, EvDo, GSM/WCDMA
+     11: LTE Only mode.
+     12: LTE/WCDMA
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Mobile network mode choices for a global phone [CHAR LIMIT=25] -->
+    <string-array name="preferred_network_mode_choices_lte">
+        <item>LTE/CDMA/EvDo/GSM/WCDMA</item>
+        <item>CDMA/EvDo/GSM/WCDMA</item>
+        <item>CDMA/EvDo</item>
+        <item>GSM/WCDMA</item>
+    </string-array>
+    <string-array name="preferred_network_mode_values_lte" translatable="false">
+        <item>"10"</item>
+        <item>"7"</item>
+        <item>"4"</item>
+        <item>"3"</item>
+    </string-array>
+
+    <!-- LTE/CDMA network mode to use for toggleLTE(true) -->
+    <integer name="toggleLTE_lte_cdma_nt_mode">10</integer>
+</resources>

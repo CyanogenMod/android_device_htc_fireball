@@ -120,20 +120,20 @@ PRODUCT_COPY_FILES += \
 
 # Verizon CDMA properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.com.google.clientidbase=android-htc \
-    ro.com.google.clientidbase.yt=android-htc \
+    ro.com.google.clientidbase=android-verizon \
+    ro.com.google.clientidbase.yt=android-verizon \
     ro.com.google.clientidbase.am=android-verizon \
     ro.com.google.clientidbase.vs=android-verizon \
     ro.com.google.clientidbase.gmm=android-verizon \
     ro.com.google.clientidbase.ms=android-verizon \
     ro.com.google.locationfeatures=1 \
-    ro.cdma.home.operator.numeric=310012 \
+    ro.cdma.home.operator.numeric=310004 \
     ro.cdma.home.operator.alpha=Verizon \
     gsm.sim.operator.alpha=Verizon \
-    gsm.sim.operator.numeric=310012 \
+    gsm.sim.operator.numeric=310004 \
     gsm.sim.operator.iso-country=us \
     gsm.operator.alpha=Verizon \
-    gsm.operator.numeric=310012 \
+    gsm.operator.numeric=310004 \
     gsm.operator.iso-country=us \
     ro.carrier=Verizon
 
