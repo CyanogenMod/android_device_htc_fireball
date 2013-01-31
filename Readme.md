@@ -1,3 +1,8 @@
+### Device tree depends on
+1.  [htc-msm8960/proprietary\_vendor\_htc/fireball](https://github.com/htc-msm8960/proprietary_vendor_htc/tree/cm-10.1/fireball)
+2.  [CyanogenMod/android\_device\_htc\_msm8960\-common](https://github.com/CyanogenMod/android_device_htc_msm8960-common/tree/cm-10.1)
+3.  [CyanogenMod/android\_kernel\_htc\_msm8960](https://github.com/CyanogenMod/android_kernel_htc_msm8960/tree/cm-10.1)
+
 ### Known Issues
 1.  MicroSD: does not show as a mass storage drive when connected to the computer  
 2.  OTG: mounting a USB stick via OTG is not yet implemented  
@@ -9,21 +14,17 @@
   if gapps is installed, you may also get an activation notice  
   *Workaround:* just hit home and the notice will go away  
 
-## Tips and Tricks
-1.  For use outside of the U.S.A. and on carriers other than Verizon Wireless, the following properties need to be removed from build.prop
+### Tips and Tricks
+1.  For use outside of the U.S.A. and on carriers other than Verizon Wireless, the following properties need to be removed from build.prop:  
+```ro.cdma.home.operator.alpha=Verizon  
+gsm.sim.operator.alpha=Verizon  
+gsm.operator.alpha=Verizon  
+ro.cdma.home.operator.numeric=310012  
+gsm.sim.operator.numeric=310012  
+gsm.operator.numeric=310012  
+ro.com.google.clientidbase=android-htc  
+ro.com.google.clientidbase.yt=android-verizon  
+ro.com.google.clientidbase.am=android-verizon  
+ro.com.google.clientidbase.gmm=android-htc  
+ro.com.google.clientidbase.ms=android-verizon```  
 
-    `ro.com.google.clientidbase=android-verizon  
-    ro.com.google.clientidbase.yt=android-verizon  
-    ro.com.google.clientidbase.am=android-verizon  
-    ro.com.google.clientidbase.vs=android-verizon  
-    ro.com.google.clientidbase.gmm=android-verizon  
-    ro.com.google.clientidbase.ms=android-verizon  
-    ro.cdma.home.operator.numeric=310004  
-    ro.cdma.home.operator.alpha=Verizon  
-    gsm.sim.operator.alpha=Verizon  
-    gsm.sim.operator.numeric=310004  
-    gsm.sim.operator.iso-country=us  
-    gsm.operator.alpha=Verizon  
-    gsm.operator.numeric=310004  
-    gsm.operator.iso-country=us  
-    ro.carrier=Verizon`  
