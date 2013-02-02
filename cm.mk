@@ -2,10 +2,6 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 $(call inherit-product, vendor/cm/config/cdma.mk)
 
-# VZW APN list
-PRODUCT_COPY_FILES += \
-    device/htc/fireball/prebuilt/common/etc/apns-conf-vzw.xml:system/etc/apns-conf.xml
-
 # Enhanced NFC
 $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 

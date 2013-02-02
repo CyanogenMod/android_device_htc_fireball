@@ -48,6 +48,9 @@ persist.radio.no_wait_for_card=1
 # Verizon data retry
 ro.cdma.data_retry_config=max_retries=infinite,0,0,60000,120000,480000,900000
 
+# Send transmit power request to RIL during WiFi hotspot on/off
+ro.ril.transmitpower=true
+
 # GLOBALMODE for Verizon
 # ro.config.multimode_cdma=1
 
