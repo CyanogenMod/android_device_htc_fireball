@@ -24,10 +24,3 @@ PRODUCT_RELEASE_NAME := fireball
 # Boot animation
 TARGET_SCREEN_HEIGHT := 960
 TARGET_SCREEN_WIDTH := 540
-
-# Goo updater app
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.goo.developerid=mdmower \
-	ro.goo.board=fireball \
-	ro.goo.rom=cm-10.1-fireball-unofficial-mdmower \
-	ro.goo.version=1
