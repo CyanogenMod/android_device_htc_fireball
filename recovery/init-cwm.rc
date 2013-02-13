@@ -12,6 +12,7 @@ on init
     mkdir /boot
     mkdir /sdcard
     mkdir /sd-ext
+    mkdir /external_sd
     mkdir /datadata
     mkdir /emmc
     mkdir /system
