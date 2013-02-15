@@ -26,13 +26,6 @@ PRODUCT_PACKAGES += \
     fstab.fighter \
     init.target.rc
 
-# recovery and custom charging
-PRODUCT_COPY_FILES += \
-    device/htc/fireball/recovery/sbin/choice_fn:recovery/root/sbin/choice_fn \
-    device/htc/fireball/recovery/sbin/power_test:recovery/root/sbin/power_test \
-    device/htc/fireball/recovery/sbin/offmode_charging:recovery/root/sbin/offmode_charging \
-    device/htc/fireball/recovery/sbin/detect_key:recovery/root/sbin/detect_key
-
 # HTC BT audio config
 PRODUCT_COPY_FILES += device/htc/fireball/configs/AudioBTIDnew.csv:system/etc/AudioBTIDnew.csv
 
