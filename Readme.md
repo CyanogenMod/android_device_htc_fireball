@@ -4,9 +4,9 @@
 
 ### Known Issues
 1.  MicroSD: does not show as a mass storage drive when connected to the computer  
-2.  Camcorder: only 720p available and occasionally loses focus  
-3.  RIL: trying to select bands from the hidden phone menu (4636) crashes com.android.phone  
-4.  RIL: the first few times the phone boots there is a "SIM card added" or "Activation" notice  
+2.  Camcorder: does not stay in focus  
+3.  RIL: trying to select bands from the hidden phone menu (4636) crashes com.android.phone \(Waiting on [CM Patch 32032](http://review.cyanogenmod.org/32032)\)  
+4.  RIL: the first few times the phone boots there may be a "SIM card added" or "Activation" notice  
 
 ### Discussion
 For up-to-date information about this release, see [this xda thread](http://forum.xda-developers.com/showthread.php?t=2121331).
