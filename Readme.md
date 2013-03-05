@@ -1,7 +1,6 @@
 ### Device tree depends on
 1.  [CyanogenMod/android\_kernel\_htc\_msm8960](https://github.com/CyanogenMod/android_kernel_htc_msm8960/tree/cm-10.1)
 2.  [CyanogenMod/android\_device\_htc\_msm8960\-common](https://github.com/CyanogenMod/android_device_htc_msm8960-common/tree/cm-10.1)
-3.  [TheMuppets/proprietary\_vendor\_htc](https://github.com/TheMuppets/proprietary_vendor_htc/tree/cm-10.1)
 
 ### Known Issues
 1.  MicroSD: does not show as a mass storage drive when connected to the computer  
