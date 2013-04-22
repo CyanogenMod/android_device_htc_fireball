@@ -23,7 +23,7 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/fireball/overlay
 
 # Boot ramdisk setup
 PRODUCT_PACKAGES += \
-    fstab.fighter \
+    fstab.qcom \
     init.target.rc
 
 # HTC BT audio config
