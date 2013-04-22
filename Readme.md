@@ -5,7 +5,7 @@
 ### Known Issues
 1.  MicroSD: does not show as a mass storage drive when connected to the computer  
 2.  Camcorder: does not stay in focus  
-3.  RIL: trying to select bands from the hidden phone menu (4636) crashes com.android.phone \(Waiting on [CM Patch 32032](http://review.cyanogenmod.org/32032)\)  
+3.  Camera: flash photography does not work  
 4.  RIL: the first few times the phone boots there may be a "SIM card added" or "Activation" notice  
 
 ### Discussion
