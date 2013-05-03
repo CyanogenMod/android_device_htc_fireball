@@ -26,9 +26,6 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.target.rc
 
-# HTC BT audio config
-PRODUCT_COPY_FILES += device/htc/fireball/configs/AudioBTIDnew.csv:system/etc/AudioBTIDnew.csv
-
 # vold config
 PRODUCT_COPY_FILES += \
     device/htc/fireball/configs/vold.fstab:system/etc/vold.fstab
@@ -49,31 +46,18 @@ PRODUCT_COPY_FILES += \
 # Keylayouts and Keychars
 PRODUCT_COPY_FILES += \
     device/htc/fireball/keylayout/atmel-touchscreen.kl:system/usr/keylayout/atmel-touchscreen.kl \
-    device/htc/fireball/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
     device/htc/fireball/keylayout/dummy_keypad.kl:system/usr/keylayout/dummy_keypad.kl \
-    device/htc/fireball/keylayout/Generic.kl:system/usr/keylayout/Generic.kl \
     device/htc/fireball/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
     device/htc/fireball/keylayout/keypad_8960.kl:system/usr/keylayout/keypad_8960.kl \
     device/htc/fireball/keylayout/msm8960-snd-card_Button_Jack.kl:system/usr/keylayout/msm8960-snd-card_Button_Jack.kl \
     device/htc/fireball/keylayout/projector-Keypad.kl:system/usr/keylayout/projector-Keypad.kl \
-    device/htc/fireball/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
     device/htc/fireball/keylayout/synaptics-rmi-touchscreen.kl:system/usr/keylayout/synaptics-rmi-touchscreen.kl \
-    device/htc/fireball/keylayout/tv-touchscreen.kl:system/usr/keylayout/tv-touchscreen.kl \
-    device/htc/fireball/keylayout/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_028e.kl \
-    device/htc/fireball/keylayout/Vendor_046d_Product_c216.kl:system/usr/keylayout/Vendor_046d_Product_c216.kl \
-    device/htc/fireball/keylayout/Vendor_046d_Product_c294.kl:system/usr/keylayout/Vendor_046d_Product_c294.kl \
-    device/htc/fireball/keylayout/Vendor_046d_Product_c299.kl:system/usr/keylayout/Vendor_046d_Product_c299.kl \
-    device/htc/fireball/keylayout/Vendor_046d_Product_c532.kl:system/usr/keylayout/Vendor_046d_Product_c532.kl \
-    device/htc/fireball/keylayout/Vendor_054c_Product_0268.kl:system/usr/keylayout/Vendor_054c_Product_0268.kl \
-    device/htc/fireball/keylayout/Vendor_05ac_Product_0239.kl:system/usr/keylayout/Vendor_05ac_Product_0239.kl \
-    device/htc/fireball/keylayout/Vendor_22b8_Product_093d.kl:system/usr/keylayout/Vendor_22b8_Product_093d.kl
+    device/htc/fireball/keylayout/tv-touchscreen.kl:system/usr/keylayout/tv-touchscreen.kl
 
 # Input device config
 PRODUCT_COPY_FILES += \
     device/htc/fireball/idc/atmel-touchscreen.idc:system/usr/idc/atmel-touchscreen.idc \
     device/htc/fireball/idc/projector_input.idc:system/usr/idc/projector_input.idc \
-    device/htc/fireball/idc/qwerty2.idc:system/usr/idc/qwerty2.idc \
-    device/htc/fireball/idc/qwerty.idc:system/usr/idc/qwerty.idc \
     device/htc/fireball/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc \
     device/htc/fireball/idc/tv-touchscreen.idc:system/usr/idc/tv-touchscreen.idc
 
