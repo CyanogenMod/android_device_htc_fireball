@@ -1,4 +1,4 @@
-#/bin/sh
+#!/bin/sh
 
 UPDATE_PACKAGE=$1
 
