@@ -1,3 +1,4 @@
+# Copyright (C) 2013 The CyanogenMod Project
 # Copyright (C) 2009 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,11 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#
 # AndroidBoard.mk is a legacy mechanism to deal with a few
 # edge-cases that can't be managed otherwise. No new rules
 # should be added to this file.
-#
 
 LOCAL_PATH := $(call my-dir)
 
