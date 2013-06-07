@@ -72,7 +72,6 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 1241513472
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Recovery
-TARGET_PREBUILT_RECOVERY_KERNEL := device/htc/fireball/recovery/kernel
 TARGET_RECOVERY_FSTAB := device/htc/fireball/rootdir/etc/fstab.qcom
 
 # TWRP
