@@ -38,8 +38,7 @@ BOARD_PROVIDES_LIBRIL := true
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/fireball/bluetooth
 
-# Vold
-BOARD_VOLD_MAX_PARTITIONS := 36
+# USB
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
 #cat /proc/emmc
@@ -71,8 +70,10 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1207958528
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 1241513472
 BOARD_FLASH_BLOCK_SIZE := 131072
 
+# Vold
+BOARD_VOLD_MAX_PARTITIONS := 36
+
 # Recovery
-TARGET_PREBUILT_RECOVERY_KERNEL := device/htc/fireball/recovery/kernel
 TARGET_RECOVERY_FSTAB := device/htc/fireball/rootdir/etc/fstab.qcom
 
 # TWRP
