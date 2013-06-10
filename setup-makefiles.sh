@@ -18,4 +18,4 @@ set -e
 
 export DEVICE=fireball
 export VENDOR=htc
-./../../../device/${VENDOR}/s4-common/setup-makefiles.sh $@
+./../s4-common/setup-makefiles.sh $@

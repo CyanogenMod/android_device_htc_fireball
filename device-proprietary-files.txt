@@ -12,10 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Executable files
-bin/akmd
-bin/bma150_usr
-
 # Camera
 lib/libchromatix_s5k3h2yx_default_video.so
 lib/libchromatix_s5k3h2yx_hdr.so
@@ -31,4 +27,4 @@ lib/hw/nfc.default.so
 vendor/firmware/libpn544_fw.so
 
 # Sensors
-lib/hw/sensors.msm8960.so
+lib/hw/sensors.default.so
