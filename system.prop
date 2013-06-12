@@ -12,9 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Extra build properties
-keyguard.no_require_sim=true
-
 # Screen
 ro.sf.lcd_density=240
 
@@ -36,31 +33,27 @@ telephony.lteOnCdmaDevice=1
 ro.config.svlte1x=true
 
 # RF team request
-ro.ril.enable.dtm = 0
-ro.ril.gprsclass = 12
-ro.ril.hsdpa.category = 10
-ro.ril.hsupa.category = 6
-ro.ril.hsxpa = 3
+ro.ril.enable.dtm=0
+ro.ril.gprsclass=12
+ro.ril.hsdpa.category=10
+ro.ril.hsupa.category=6
+ro.ril.hsxpa=3
 
 # HSDPA low throughput
-ro.ril.disable.power.collapse = 1
+ro.ril.disable.power.collapse=1
 
 # netmgrd
 persist.data_netmgrd_nint=8
 persist.data_netmgrd_mtu=1428
 
 # Get CDMA subscription when RUIM is ready
-ro.cdma.subscribe_on_ruim_ready = true
-persist.radio.no_wait_for_card=1
+ro.cdma.subscribe_on_ruim_ready=true
 
 # Verizon data retry
 ro.cdma.data_retry_config=max_retries=infinite,0,0,60000,120000,480000,900000
 
 # Send transmit power request to RIL during WiFi hotspot on/off
 ro.ril.transmitpower=true
-
-# GLOBALMODE for Verizon
-# ro.config.multimode_cdma=1
 
 # Carrier definitions
 ro.cdma.home.operator.alpha=Verizon
@@ -79,12 +72,6 @@ ro.com.google.clientidbase.ms=android-verizon
 
 # Verizon Wireless default ecclist
 ro.ril.ecclist=112,911,#911,*911
-
-# Switch GPS driver to QMI
-persist.gps.qmienabled=true
-
-# Set GPS mode
-ro.ril.def.agps.mode=6
 
 # NFC
 debug.nfc.fw_download=true
