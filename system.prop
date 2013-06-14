@@ -24,8 +24,8 @@ rild.libpath=/system/lib/libril-qc-qmi-1.so
 ro.vendor.extension_library=/system/lib/libqc-opt.so
 ril.subscription.types=NV,RUIM
 
-# Default to LTE/CDMA/EvDo/GSM/WCDMA Network Mode
-ro.telephony.default_network=10
+# Default to LTE/CDMA/EvDo Network Mode
+ro.telephony.default_network=8
 
 DEVICE_PROVISIONED=1
 
