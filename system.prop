@@ -59,9 +59,9 @@ ro.ril.transmitpower=true
 ro.cdma.home.operator.alpha=Verizon
 gsm.sim.operator.alpha=Verizon
 gsm.operator.alpha=Verizon
-ro.cdma.home.operator.numeric=310012
-gsm.sim.operator.numeric=310012
-gsm.operator.numeric=310012
+ro.cdma.home.operator.numeric=311480
+gsm.sim.operator.numeric=311480
+gsm.operator.numeric=311480
 
 # Access to Verizon/HTC apps in Play store
 ro.com.google.clientidbase=android-htc
