@@ -49,8 +49,9 @@ persist.data_netmgrd_mtu=1428
 # Get CDMA subscription when RUIM is ready
 ro.cdma.subscribe_on_ruim_ready=true
 
-# Verizon data retry
-ro.cdma.data_retry_config=max_retries=infinite,0,0,60000,120000,480000,900000
+# RIL data retry times
+ro.cdma.data_retry_config=max_retries=infinite,5000,5000,60000,120000,480000,900000
+ro.gsm.data_retry_config=max_retries=infinite,5000,5000,60000,120000,480000,900000
 
 # Send transmit power request to RIL during WiFi hotspot on/off
 ro.ril.transmitpower=true
