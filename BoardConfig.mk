@@ -38,11 +38,7 @@ BOARD_PROVIDES_LIBRIL := true
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/fireball/bluetooth
 
-# HTCLOG
-COMMON_GLOBAL_CFLAGS += -DHTCLOG
-
 # Vold
-# BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 BOARD_VOLD_MAX_PARTITIONS := 36
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
