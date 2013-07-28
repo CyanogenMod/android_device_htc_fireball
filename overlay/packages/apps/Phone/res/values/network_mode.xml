@@ -37,7 +37,7 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Mobile network mode choices for a global phone [CHAR LIMIT=25] -->
-    <string-array name="preferred_network_mode_choices_lte">
+    <string-array name="preferred_network_mode_choices">
         <item>LTE/WCDMA</item>
         <item>LTE Only</item>
         <item>LTE/CDMA/EvDo/GSM/WCDMA</item>
@@ -47,7 +47,7 @@
         <item>CDMA/EvDo</item>
         <item>GSM/WCDMA</item>
     </string-array>
-    <string-array name="preferred_network_mode_values_lte" translatable="false">
+    <string-array name="preferred_network_mode_values" translatable="false">
         <item>"12"</item>
         <item>"11"</item>
         <item>"10"</item>
