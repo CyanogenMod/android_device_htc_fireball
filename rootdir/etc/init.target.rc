@@ -13,7 +13,6 @@
 # limitations under the License.
 
 on early-init
-    mkdir /storage 0050 system sdcard_r
     mkdir /storage/sdcard0 0000 system system
     mkdir /storage/sdcard1 0000 system system
 
