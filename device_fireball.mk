@@ -25,10 +25,6 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     remount.qcom
 
-# Vold
-PRODUCT_COPY_FILES += \
-    device/htc/fireball/configs/vold.fstab:system/etc/vold.fstab
-
 # Sound configs
 PRODUCT_COPY_FILES += \
     device/htc/fireball/dsp/soundimage/srs_bypass.cfg:system/etc/soundimage/srs_bypass.cfg \
