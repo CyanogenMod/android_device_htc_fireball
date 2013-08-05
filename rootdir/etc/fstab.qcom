@@ -24,6 +24,10 @@
 /dev/block/mmcblk0p34	/cache		ext4	noatime,nosuid,nodev,barrier=0				wait
 /dev/block/mmcblk0p35	/data		ext4	noatime,nosuid,nodev,noauto_da_alloc,barrier=0	wait,encryptable=footer
 
-# SD card
+# Storage - OS
 /devices/platform/msm_sdcc.1/mmc_host/mmc0	/storage/sdcard0	auto	defaults		voldmanaged=sdcard0:36
 /devices/platform/msm_sdcc.3/mmc_host/mmc1	/storage/sdcard1	auto	defaults		voldmanaged=sdcard1:auto
+
+# Storage - Recovery
+/dev/block/mmcblk0p36	/sdcard			vfat	defaults	recoveryonly,lun=/sys/devices/platform/msm_hsusb/gadget/lun0/file
+/dev/block/mmcblk1p1	/external_sd	vfat	defaults	recoveryonly,lun=/sys/devices/platform/msm_hsusb/gadget/lun1/file
