@@ -27,7 +27,3 @@
 # SD card
 /devices/platform/msm_sdcc.1/mmc_host/mmc0	/storage/sdcard0	auto	defaults		voldmanaged=sdcard0:36
 /devices/platform/msm_sdcc.3/mmc_host/mmc1	/storage/sdcard1	auto	defaults		voldmanaged=sdcard1:auto
-
-# Recovery
-/dev/block/mmcblk0p36	/sdcard		auto	defaults	recoveryonly
-/dev/block/mmcblk1p1	/external_sd	auto	defaults	recoveryonly
