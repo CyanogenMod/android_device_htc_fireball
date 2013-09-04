@@ -21,7 +21,6 @@ rild.libpath=/system/lib/libril-qc-qmi-1.so
 ro.vendor.extension_library=/system/lib/libqc-opt.so
 ril.subscription.types=NV,RUIM
 ro.telephony.ril_class=HTCQualcommRIL
-ro.telephony.ril.v3=skipradiooff
 
 # Default to LTE/CDMA/EvDo Network Mode
 ro.telephony.default_network=8
