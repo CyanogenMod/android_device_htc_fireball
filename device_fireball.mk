@@ -38,6 +38,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/fireball/dsp/snd_soc_msm/snd_soc_msm_2x:/system/etc/snd_soc_msm/snd_soc_msm_2x
 
+# Media config
+PRODUCT_COPY_FILES += \
+    device/htc/fireball/configs/media_profiles.xml:system/etc/media_profiles.xml
+
 # Keylayouts and Keychars
 PRODUCT_COPY_FILES += \
     device/htc/fireball/keylayout/atmel-touchscreen.kl:system/usr/keylayout/atmel-touchscreen.kl \
