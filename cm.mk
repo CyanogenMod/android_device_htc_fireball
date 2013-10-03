@@ -25,7 +25,7 @@ PRODUCT_DEVICE := fireball
 PRODUCT_NAME := cm_fireball
 PRODUCT_BRAND := htc
 PRODUCT_MODEL := Incredible 4G LTE
-PRODUCT_MANUFACTURER := htc
+PRODUCT_MANUFACTURER := HTC
 
 # Set build fingerprint / ID / Product Name ect.
 PRODUCT_BUILD_PROP_OVERRIDES += \
