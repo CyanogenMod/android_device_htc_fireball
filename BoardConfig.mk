@@ -26,6 +26,9 @@
 # inherit from S4 common
 -include device/htc/s4-common/BoardConfigCommon.mk
 
+# Audio
+BOARD_USES_SEPERATED_VOICE_SPEAKER := true
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := fireball
 
