@@ -1624,8 +1624,8 @@ SectionDevice
 		'HPHR DAC Switch':1:1
 		'RX1 Digital Volume':1:67
 		'RX2 Digital Volume':1:67
-		'HPHL Volume':1:60
-		'HPHR Volume':1:60
+		'HPHL Volume':1:65
+		'HPHR Volume':1:65
 	EndSequence
 
 	DisableSequence
@@ -1661,10 +1661,10 @@ SectionDevice
 		'RX4 Digital Volume':1:77
 		'RX1 Digital Volume':1:67
 		'RX2 Digital Volume':1:67
-		'LINEOUT1 Volume':1:100
-		'LINEOUT3 Volume':1:100
-		'HPHL Volume':1:55
-		'HPHR Volume':1:55
+		'LINEOUT1 Volume':1:70
+		'LINEOUT3 Volume':1:70
+		'HPHL Volume':1:50
+		'HPHR Volume':1:50
 		'SPK AMP EN Switch':1:1
 	EndSequence
 
@@ -1856,7 +1856,7 @@ SectionDevice
 		'SLIM_0_TX Channels':0:One
 		'SLIM TX7 MUX':0:DEC6
 		'DEC6 MUX':0:ADC1
-		'DEC6 Volume':1:70
+		'DEC6 Volume':1:76
 		'ADC1 Volume':1:100
 		'MICBIAS1 CAPLESS Switch':1:1
 	EndSequence
