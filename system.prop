@@ -66,11 +66,7 @@ gsm.sim.operator.numeric=311480
 gsm.operator.numeric=311480
 
 # Access to Verizon/HTC apps in Play store
-ro.com.google.clientidbase=android-htc
-ro.com.google.clientidbase.yt=android-verizon
-ro.com.google.clientidbase.am=android-verizon
-ro.com.google.clientidbase.gmm=android-htc
-ro.com.google.clientidbase.ms=android-verizon
+ro.com.google.clientidbase=android-verizon
 
 # Verizon Wireless default ecclist
 ro.ril.ecclist=112,911,#911,*911
