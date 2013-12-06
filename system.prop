@@ -18,7 +18,7 @@ ro.sf.lcd_density=240
 # RIL
 rild.libargs=-d /dev/smd0
 rild.libpath=/system/lib/libril-qc-qmi-1.so
-ril.subscription.types=NV,RUIM
+ro.telephony.default_cdma_sub=0
 ro.telephony.ril_class=HTCQualcommRIL
 
 # Default to LTE/CDMA/EvDo Network Mode
