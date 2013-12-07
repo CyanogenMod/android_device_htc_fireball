@@ -19,69 +19,27 @@ ro.sf.lcd_density=240
 rild.libargs=-d /dev/smd0
 rild.libpath=/system/lib/libril-qc-qmi-1.so
 ro.vendor.extension_library=/system/lib/libqc-opt.so
-ril.subscription.types=NV,RUIM
-ro.telephony.ril_class=HTCQualcommRIL
-
-# Set CDMA SUBSCRIPTION SOURCE to RUIM in Database for this device
+ro.cdma.subscribe_on_ruim_ready=true
+ro.config.svlte1x=true
+ro.ril.wp.feature=1
 ro.telephony.default_cdma_sub=0
-
-# Default to LTE/CDMA/EvDo Network Mode
+ro.telephony.ril_class=HTCQualcommRIL
 ro.telephony.default_network=8
-
-DEVICE_PROVISIONED=1
-
-# Supports LTE
 telephony.lteOnCdmaDevice=1
 
-# Supports simultaneous 1x voice + LTE
-ro.config.svlte1x=true
+persist.radio.snapshot_enabled=1
+persist.radio.snapshot_timer=22
+DEVICE_PROVISIONED=1
 
-# RF team request
-ro.ril.enable.dtm=0
-ro.ril.gprsclass=12
-ro.ril.hsdpa.category=10
-ro.ril.hsupa.category=6
-ro.ril.hsxpa=3
-
-# HSDPA low throughput
-ro.ril.disable.power.collapse=1
-
-# netmgrd
-persist.data_netmgrd_nint=8
-persist.data_netmgrd_mtu=1428
-
-# Get CDMA subscription when RUIM is ready
-ro.cdma.subscribe_on_ruim_ready=true
-
-# RIL data retry times
 ro.cdma.data_retry_config=max_retries=infinite,5000,5000,60000,120000,480000,900000
 ro.gsm.data_retry_config=max_retries=infinite,5000,5000,60000,120000,480000,900000
 
-# Send transmit power request to RIL during WiFi hotspot on/off
-ro.ril.transmitpower=true
-
-# Carrier definitions
 ro.cdma.home.operator.alpha=Verizon
 gsm.sim.operator.alpha=Verizon
 gsm.operator.alpha=Verizon
 ro.cdma.home.operator.numeric=311480
 gsm.sim.operator.numeric=311480
 gsm.operator.numeric=311480
-
-# Access to Verizon/HTC apps in Play store
-ro.com.google.clientidbase=android-verizon
-
-# Verizon Wireless default ecclist
-ro.ril.ecclist=112,911,#911,*911
-
-# NFC
-debug.nfc.fw_download=true
-debug.nfc.fw_boot_download=false
-debug.nfc.se=true
-ro.nfc.port=I2C
-
-# Enable time services
-persist.timed.enable=true
 
 # UMS/MTP
 persist.sys.usb.config=mass_storage,adb
