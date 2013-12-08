@@ -323,21 +323,6 @@ SectionVerb
 	PlaybackPCM  0
 	ACDBID 0:0
 EndSection
-
-SectionVerb
-	Name "HiFiVoice Cradle Rx"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
-	CapturePCM  0
-	PlaybackPCM  0
-	ACDBID 0:0
-EndSection
 }
 
 SectionUseCase."HiFi Low Power" {
@@ -352,7 +337,6 @@ SectionVerb
 	DisableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
 	EndSequence
-	CapturePCM  0
 	PlaybackPCM  4
 	ACDBID 0:0
 EndSection
@@ -367,7 +351,6 @@ SectionVerb
 	DisableSequence
 		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia3':1:0
 	EndSequence
-	CapturePCM  0
 	PlaybackPCM  4
 	ACDBID 0:0
 EndSection
@@ -382,7 +365,6 @@ SectionVerb
 	DisableSequence
 		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia3':1:0
 	EndSequence
-	CapturePCM  0
 	PlaybackPCM  4
 	ACDBID 0:0
 EndSection
@@ -397,7 +379,6 @@ SectionVerb
 	DisableSequence
 		'INTERNAL_FM_RX Audio Mixer MultiMedia3':1:0
 	EndSequence
-	CapturePCM  0
 	PlaybackPCM  4
 	ACDBID 0:0
 EndSection
@@ -412,7 +393,6 @@ SectionVerb
 	DisableSequence
 		'HDMI Mixer MultiMedia3':1:0
 	EndSequence
-	CapturePCM  0
 	PlaybackPCM  4
 	ACDBID 0:0
 EndSection
@@ -427,7 +407,6 @@ SectionVerb
 	DisableSequence
 		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
 	EndSequence
-	CapturePCM  0
 	PlaybackPCM  4
 	ACDBID 0:0
 EndSection
@@ -444,7 +423,6 @@ SectionVerb
 		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
 	EndSequence
-	CapturePCM  0
 	PlaybackPCM  4
 	ACDBID 0:0
 EndSection
@@ -461,7 +439,6 @@ SectionVerb
 		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
 	EndSequence
-	CapturePCM  0
 	PlaybackPCM  4
 	ACDBID 0:0
 EndSection
@@ -478,7 +455,6 @@ SectionVerb
 		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
 	EndSequence
-	CapturePCM  0
 	PlaybackPCM  4
 	ACDBID 0:0
 EndSection
@@ -495,7 +471,6 @@ SectionVerb
 		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
 	EndSequence
-	CapturePCM  0
 	PlaybackPCM  4
 	ACDBID 0:0
 EndSection
@@ -512,7 +487,6 @@ SectionVerb
 		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
 	EndSequence
-	CapturePCM  0
 	PlaybackPCM  4
 	ACDBID 0:0
 EndSection
@@ -529,7 +503,6 @@ SectionVerb
 		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
 	EndSequence
-	CapturePCM  0
 	PlaybackPCM  4
 	ACDBID 0:0
 EndSection
@@ -542,7 +515,6 @@ SectionVerb
 
 	DisableSequence
 	EndSequence
-	CapturePCM  0
 	PlaybackPCM  4
 	ACDBID 0:0
 EndSection
@@ -559,22 +531,6 @@ SectionVerb
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
 		'INTERNAL_FM_RX Audio Mixer MultiMedia3':1:0
 	EndSequence
-	CapturePCM  0
-	PlaybackPCM  4
-	ACDBID 0:0
-EndSection
-
-SectionVerb
-	Name "HiFi Low PowerVoice Cradle Rx"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
-	EndSequence
-	CapturePCM  0
 	PlaybackPCM  4
 	ACDBID 0:0
 EndSection
@@ -591,7 +547,6 @@ SectionVerb
 	DisableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
 	EndSequence
-	CapturePCM  14
 	PlaybackPCM  14
 EndSection
 
@@ -1025,7 +980,7 @@ SectionVerb
 	Name "Voice CallBT SCO WB Rx"
 
 	DisableSequence
-		'Internal BTSCO SampleRate':0:8000
+		'Internal BTSCO SampleRate':0:16000
 		'INTERNAL_BT_SCO_RX_Voice Mixer CSVoice':1:0
 		'Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice':1:0
 	EndSequence
@@ -1174,7 +1129,7 @@ SectionVerb
 	Name "Voice Call IPBT SCO WB Rx"
 
 	DisableSequence
-		'Internal BTSCO SampleRate':0:8000
+		'Internal BTSCO SampleRate':0:16000
 		'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:0
 		'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:0
 	EndSequence
@@ -1197,31 +1152,14 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice Call IPHDMI"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:1
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:0
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:0
-	EndSequence
-	CapturePCM  3
-	PlaybackPCM  3
-	ACDBID 0:0
-EndSection
-
-SectionVerb
 	Name "Voice Call IPHDMI Tx"
 
 	EnableSequence
 		'HDMI_RX_Voice Mixer CSVoice':1:1
 		'Voice_Tx Mixer SLIM_0_TX_Voice':1:1
 	EndSequence
-	CapturePCM  2
-	PlaybackPCM  2
+	CapturePCM  3
+	PlaybackPCM  3
 	ACDBID 0:0
 EndSection
 
@@ -1235,8 +1173,8 @@ SectionVerb
 		'AFE_PCM_RX_Voice Mixer Voip':1:0
 		'Voip_Tx Mixer AFE_PCM_TX_Voip':1:0
 	EndSequence
-	CapturePCM  2
-	PlaybackPCM  2
+	CapturePCM  3
+	PlaybackPCM  3
 	ACDBID 0:0
 EndSection
 
@@ -1250,47 +1188,13 @@ SectionVerb
 
 	DisableSequence
 	EndSequence
-	CapturePCM  2
-	PlaybackPCM  2
+	CapturePCM  3
+	PlaybackPCM  3
 	ACDBID 0:0
 EndSection
 
 SectionVerb
 	Name "Voice Call IPSpeaker DMIC Endfire HW VOIP"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:1
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:0
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:0
-	EndSequence
-	CapturePCM  3
-	PlaybackPCM  3
-	ACDBID 0:0
-EndSection
-
-SectionVerb
-	Name "Voice Call IPVoice Cradle Rx"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:1
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:0
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:0
-	EndSequence
-	CapturePCM  3
-	PlaybackPCM  3
-	ACDBID 0:0
-EndSection
-
-SectionVerb
-	Name "Voice Call IPVoice Cradle Tx"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer Voip':1:1
@@ -2011,30 +1915,6 @@ SectionDevice
 	EndSequence
 
 	ACDBID 0:2
-EndSection
-
-SectionDevice
-	Name "SecondMic"
-	Comment "SecondMic Tx device"
-
-	EnableSequence
-		'SLIM_0_TX Channels':0:One
-		'SLIM TX7 MUX':0:DEC4
-		'DEC4 MUX':0:ADC3
-		'DEC4 Volume':1:82
-		'ADC3 Volume':1:100
-		'MICBIAS3 CAPLESS Switch':1:1
-	EndSequence
-
-	DisableSequence
-		'ADC3 Volume':1:0
-		'DEC4 Volume':1:0
-		'DEC4 MUX':0:ZERO
-		'SLIM TX7 MUX':0:ZERO
-		'MICBIAS3 CAPLESS Switch':1:0
-	EndSequence
-
-	ACDBID 8:2
 EndSection
 
 SectionDevice
@@ -2902,6 +2782,7 @@ EndSection
 
 SectionModifier
 	Name "Capture Voice"
+
 	CapturePCM  2
 	PlaybackPCM  2
 	ACDBID 0:0
@@ -2969,8 +2850,8 @@ SectionModifier
 
 	DisableSequence
 	EndSequence
-	CapturePCM  0
-	PlaybackPCM  0
+	CapturePCM  6
+	PlaybackPCM  5
 	ACDBID 0:0
 EndSection
 
@@ -3054,7 +2935,6 @@ SectionModifier
 	DisableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
 	EndSequence
-	CapturePCM  0
 	PlaybackPCM  4
 	ACDBID 0:0
 EndSection
@@ -3069,7 +2949,6 @@ SectionModifier
 	DisableSequence
 		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia3':1:0
 	EndSequence
-	CapturePCM  0
 	PlaybackPCM  4
 	ACDBID 0:0
 EndSection
@@ -3084,7 +2963,6 @@ SectionModifier
 	DisableSequence
 		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia3':1:0
 	EndSequence
-	CapturePCM  0
 	PlaybackPCM  4
 	ACDBID 0:0
 EndSection
@@ -3099,7 +2977,6 @@ SectionModifier
 	DisableSequence
 		'INTERNAL_FM_RX Audio Mixer MultiMedia3':1:0
 	EndSequence
-	CapturePCM  0
 	PlaybackPCM  4
 	ACDBID 0:0
 EndSection
@@ -3113,8 +2990,7 @@ SectionModifier
 
 	DisableSequence
 		'HDMI Mixer MultiMedia3':1:0
-	EndSequencei
-	CapturePCM  0
+	EndSequence
 	PlaybackPCM  4
 	ACDBID 0:0
 EndSection
@@ -3129,7 +3005,6 @@ SectionModifier
 	DisableSequence
 		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
 	EndSequence
-	CapturePCM  0
 	PlaybackPCM  4
 	ACDBID 0:0
 EndSection
@@ -3238,8 +3113,7 @@ SectionModifier
 
 	DisableSequence
 	EndSequence
-	CapturePCM  0
-	PlaybackPCM  0
+	PlaybackPCM  4
 	ACDBID 0:0
 EndSection
 
@@ -3254,21 +3128,6 @@ SectionModifier
 	DisableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
 		'INTERNAL_FM_RX Audio Mixer MultiMedia3':1:0
-	EndSequence
-	CapturePCM  0
-	PlaybackPCM  4
-	ACDBID 0:0
-EndSection
-
-SectionModifier
-	Name "Play LPAVoice Cradle Rx"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
 	EndSequence
 	PlaybackPCM  4
 	ACDBID 0:0
@@ -3502,22 +3361,6 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play MusicVoice Cradle Rx"
-	Comment "Modifier for music playback"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
-	CapturePCM  0
-	PlaybackPCM  0
-	ACDBID 0:0
-EndSection
-
-SectionModifier
 	Name "Play Tunnel"
 
 	EnableSequence
@@ -3689,7 +3532,7 @@ SectionModifier
 	Name "Play VoiceBT SCO WB Rx"
 
 	DisableSequence
-		'Internal BTSCO SampleRate':0:8000
+		'Internal BTSCO SampleRate':0:16000
 		'INTERNAL_BT_SCO_RX_Voice Mixer CSVoice':1:0
 		'Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice':1:0
 	EndSequence
@@ -3860,7 +3703,7 @@ SectionModifier
 	Name "Play VOIPBT SCO WB Rx"
 
 	DisableSequence
-		'Internal BTSCO SampleRate':0:8000
+		'Internal BTSCO SampleRate':0:16000
 		'INTERNAL_BT_SCO_RX_Voice Mixer Voip':1:0
 		'Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip':1:0
 	EndSequence
@@ -3904,8 +3747,8 @@ SectionModifier
 		'AFE_PCM_RX_Voice Mixer Voip':1:0
 		'Voip_Tx Mixer AFE_PCM_TX_Voip':1:0
 	EndSequence
-	CapturePCM  2
-	PlaybackPCM  2
+	CapturePCM  3
+	PlaybackPCM  3
 	ACDBID 0:0
 EndSection
 
@@ -3919,8 +3762,8 @@ SectionModifier
 
 	DisableSequence
 	EndSequence
-	CapturePCM  2
-	PlaybackPCM  2
+	CapturePCM  3
+	PlaybackPCM  3
 	ACDBID 0:0
 EndSection
 
