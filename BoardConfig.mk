@@ -76,9 +76,6 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 # Vold
 BOARD_VOLD_MAX_PARTITIONS := 36
 
-# Recovery
-TARGET_RECOVERY_FSTAB := device/htc/fireball/rootdir/etc/fstab.qcom
-
 # TWRP
 DEVICE_RESOLUTION := 540x960
 TW_FLASH_FROM_STORAGE := true
