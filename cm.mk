@@ -29,10 +29,10 @@ PRODUCT_MANUFACTURER := htc
 
 # Set build fingerprint / ID / Product Name ect.
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=htc_fireball \
+    PRODUCT_NAME=fireball \
     BUILD_ID=IMM76D \
-    BUILD_FINGERPRINT="verizon_wwe/fireball/fireball:4.0.4/IMM76D/111397.2:user/release-keys" \
-    PRIVATE_BUILD_DESC="2.17.605.2 CL111397 release-keys"
+    BUILD_FINGERPRINT="verizon_wwe/fireball/fireball:4.0.4/IMM76D/278117.2:user/release-keys" \
+    PRIVATE_BUILD_DESC="2.19.605.2 CL278117 release-keys"
 
 PRODUCT_GMS_CLIENTID_BASE := android-verizon
 
