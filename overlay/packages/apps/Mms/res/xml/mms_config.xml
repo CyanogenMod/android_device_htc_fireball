@@ -24,10 +24,6 @@
 -->
 
 <mms_config version="4">
-
-    <!-- Maximum message size in bytes for a MMS message -->
-    <int name="maxMessageSize">307200</int>
-
     <!-- Maximum height for an attached image -->
     <int name="maxImageHeight">960</int>
 
@@ -46,13 +42,7 @@
          message will be converted to an mms. -->
     <int name="smsToMmsTextThreshold">3</int>
 
-    <!-- If true, The text message over 160 characters will be sent in multi part.
-         If false, The text message over 160 characters will be sent
-         via multi media message. -->
-    <bool name="enableMultipartSMS">true</bool>
-
     <!-- If true, the text message will be split every 160 characters.
          If false, the text will never be split before being sent. -->
     <bool name="enableSplitSMS">true</bool>
-
 </mms_config>
