@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Overlays
+PRODUCT_PACKAGE_OVERLAYS += device/htc/fireball/overlay
+
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Enhanced NFC

@@ -17,8 +17,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # common S4 configs
 $(call inherit-product, device/htc/s4-common/s4.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/htc/fireball/overlay
-
 # Boot ramdisk setup
 PRODUCT_PACKAGES += \
     fstab.qcom \
