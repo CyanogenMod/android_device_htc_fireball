@@ -21,18 +21,18 @@ $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 $(call inherit-product, device/htc/fireball/device_fireball.mk)
 
 # Device naming
-PRODUCT_DEVICE := fireball
 PRODUCT_NAME := cm_fireball
-PRODUCT_BRAND := htc
-PRODUCT_MODEL := Incredible 4G LTE
+PRODUCT_DEVICE := fireball
 PRODUCT_MANUFACTURER := HTC
 
 # Set build fingerprint / ID / Product Name ect.
 PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_MODEL=ADR6410LVW \
+    PRODUCT_BRAND=verizon_wwe \
     PRODUCT_NAME=fireball \
     BUILD_ID=IMM76D \
-    BUILD_FINGERPRINT="verizon_wwe/fireball/fireball:4.0.4/IMM76D/278117.2:user/release-keys" \
-    PRIVATE_BUILD_DESC="2.19.605.2 CL278117 release-keys"
+    PRIVATE_BUILD_DESC="2.19.605.2 CL278117 release-keys" \
+    BUILD_FINGERPRINT="verizon_wwe/fireball/fireball:4.0.4/IMM76D/278117.2:user/release-keys"
 
 # Access VZW apps in Play store
 PRODUCT_GMS_CLIENTID_BASE := android-verizon
