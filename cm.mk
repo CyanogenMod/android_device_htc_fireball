@@ -12,13 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit device configuration
+$(call inherit-product, device/htc/fireball/device_fireball.mk)
 
 # Enhanced NFC
 $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 
-# Inherit device configuration
-$(call inherit-product, device/htc/fireball/device_fireball.mk)
+$(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Device naming
 PRODUCT_DEVICE := fireball
