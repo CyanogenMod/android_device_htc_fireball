@@ -23,7 +23,7 @@ ro.config.svlte1x=true
 ro.ril.wp.feature=1
 ro.telephony.default_cdma_sub=0
 ro.telephony.ril_class=HTCQualcommRIL
-ro.telephony.default_network=8
+ro.telephony.default_network=10
 telephony.lteOnCdmaDevice=1
 
 persist.radio.snapshot_enabled=1
