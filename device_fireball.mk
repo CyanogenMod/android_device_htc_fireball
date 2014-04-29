@@ -60,10 +60,6 @@ PRODUCT_COPY_FILES += \
     device/htc/fireball/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc \
     device/htc/fireball/idc/tv-touchscreen.idc:system/usr/idc/tv-touchscreen.idc
 
-# Recovery
-PRODUCT_COPY_FILES += \
-    device/htc/fireball/rootdir/etc/fstab.qcom:recovery/root/fstab.qcom
-
 # NFCEE access control
 ifeq ($(TARGET_BUILD_VARIANT),user)
     NFCEE_ACCESS_PATH := device/htc/fireball/configs/nfcee_access.xml
