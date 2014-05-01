@@ -41,7 +41,7 @@ gsm.sim.operator.numeric=311480
 gsm.operator.numeric=311480
 
 # UMS/MTP
-persist.sys.usb.config=mass_storage,adb
+persist.sys.usb.config=mtp
 
 # Recovery
 ro.cwm.forbid_format=/firmware_radio,/firmware_q6,/devlog
