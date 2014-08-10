@@ -41,6 +41,9 @@ BOARD_PROVIDES_LIBRIL := true
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/fireball/bluetooth
 
+# Camera
+BOARD_CAMERA_FRONT_VGA := true
+
 # USB
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
