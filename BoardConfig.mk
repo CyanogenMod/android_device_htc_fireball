@@ -26,6 +26,9 @@
 # inherit from S4 common
 -include device/htc/s4-common/BoardConfigCommon.mk
 
+# Require baseband version
+TARGET_BOARD_INFO_FILE ?= device/htc/fireball/board-info.txt
+
 # Audio
 BOARD_USES_SEPERATED_VOICE_SPEAKER := true
 
