@@ -26,5 +26,9 @@ lib/libchromatix_s5k6a1gx_zsl.so
 lib/hw/nfc.default.so
 vendor/firmware/libpn544_fw.so
 
+# Qualcomm/HTC common libs
+lib/libqcci_legacy.so
+lib/libqmi_client_qmux.so
+
 # Sensors
 lib/hw/sensors.default.so
