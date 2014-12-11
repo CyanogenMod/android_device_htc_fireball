@@ -32,6 +32,9 @@ TARGET_BOARD_INFO_FILE ?= device/htc/fireball/board-info.txt
 # Audio
 BOARD_USES_SEPERATED_VOICE_SPEAKER := true
 
+# Bionic
+TARGET_NEEDS_NON_PIE_SUPPORT := true
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := fireball
 
@@ -40,6 +43,9 @@ TARGET_KERNEL_CONFIG := fighter_defconfig
 
 # RIL
 BOARD_PROVIDES_LIBRIL := true
+
+# SELinux
+BOARD_SEPOLICY_DIRS += device/htc/fireball/sepolicy
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/fireball/bluetooth
