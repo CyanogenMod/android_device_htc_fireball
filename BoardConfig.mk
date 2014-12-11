@@ -35,6 +35,9 @@ TARGET_OTA_ASSERT_DEVICE := fireballx
 # Audio
 BOARD_USES_SEPERATED_VOICE_SPEAKER := true
 
+# Bionic
+TARGET_NEEDS_NON_PIE_SUPPORT := true
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := fireball
 
