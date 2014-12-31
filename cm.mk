@@ -34,9 +34,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT="verizon_wwe/fireball/fireball:4.0.4/IMM76D/278117.2:user/release-keys" \
     PRIVATE_BUILD_DESC="2.19.605.2 CL278117 release-keys"
 
-# Access VZW apps in Play store
-PRODUCT_GMS_CLIENTID_BASE := android-verizon
-
 # Release name
 PRODUCT_RELEASE_NAME := fireball
 
