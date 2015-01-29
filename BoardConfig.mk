@@ -29,6 +29,9 @@
 # Require baseband version
 TARGET_BOARD_INFO_FILE ?= device/htc/fireball/board-info.txt
 
+# Assert
+TARGET_OTA_ASSERT_DEVICE := fireballx
+
 # Audio
 BOARD_USES_SEPERATED_VOICE_SPEAKER := true
 
