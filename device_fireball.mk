@@ -76,10 +76,6 @@ PRODUCT_PACKAGES += \
     Tag \
     com.android.nfc_extras
 
-# Torch
-PRODUCT_PACKAGES += \
-    Torch
-
 # Filesystem management tools
 PRODUCT_PACKAGES += \
     e2fsck
