@@ -29,3 +29,6 @@
 # SD card
 /devices/platform/msm_sdcc.1/mmc_host/mmc0*	auto	auto	defaults		voldmanaged=sdcard0:36,noemulatedsd
 /devices/platform/msm_sdcc.3/mmc_host/mmc1*	auto	auto	defaults		voldmanaged=sdcard1:auto
+
+# zRAM
+/dev/block/zram0				none		swap	defaults						zramsize=134217728,swapprio=100
