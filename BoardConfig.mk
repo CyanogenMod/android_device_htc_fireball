@@ -41,6 +41,9 @@ TARGET_KERNEL_CONFIG := fighter_defconfig
 # RIL
 BOARD_PROVIDES_LIBRIL := true
 
+# SELinux
+BOARD_SEPOLICY_DIRS += device/htc/fireball/sepolicy
+
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/fireball/bluetooth
 
