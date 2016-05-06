@@ -1,4 +1,4 @@
-# Copyright (C) 2013 The CyanogenMod Project
+# Copyright (C) 2016 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,27 +12,38 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# common S4 configs
+# Get non-open-source specific aspects
+$(call inherit-product-if-exists, vendor/htc/fireball/fireball-vendor.mk)
+
+# Inherit s4-common
 $(call inherit-product, device/htc/s4-common/s4.mk)
 
+# Overlays
 DEVICE_PACKAGE_OVERLAYS += device/htc/fireball/overlay
 
-# Boot ramdisk setup
-PRODUCT_PACKAGES += \
-    fstab.qcom \
-    init.target.rc
+# Screen density
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := hdpi
 
-# Sound configs
+# Boot animation
+TARGET_SCREEN_HEIGHT := 960
+TARGET_SCREEN_WIDTH := 540
+
+$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
+
+# Audio
 PRODUCT_COPY_FILES += \
     device/htc/fireball/dsp/snd_soc_msm/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x
 
-# Media config
+# Input
 PRODUCT_COPY_FILES += \
-    device/htc/fireball/configs/media_profiles.xml:system/etc/media_profiles.xml
+    device/htc/fireball/idc/atmel-touchscreen.idc:system/usr/idc/atmel-touchscreen.idc \
+    device/htc/fireball/idc/projector_input.idc:system/usr/idc/projector_input.idc \
+    device/htc/fireball/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc \
+    device/htc/fireball/idc/tv-touchscreen.idc:system/usr/idc/tv-touchscreen.idc
 
-# Keylayouts and Keychars
 PRODUCT_COPY_FILES += \
     device/htc/fireball/keylayout/atmel-touchscreen.kl:system/usr/keylayout/atmel-touchscreen.kl \
     device/htc/fireball/keylayout/dummy_keypad.kl:system/usr/keylayout/dummy_keypad.kl \
@@ -43,12 +54,9 @@ PRODUCT_COPY_FILES += \
     device/htc/fireball/keylayout/synaptics-rmi-touchscreen.kl:system/usr/keylayout/synaptics-rmi-touchscreen.kl \
     device/htc/fireball/keylayout/tv-touchscreen.kl:system/usr/keylayout/tv-touchscreen.kl
 
-# Input device config
+# Media config
 PRODUCT_COPY_FILES += \
-    device/htc/fireball/idc/atmel-touchscreen.idc:system/usr/idc/atmel-touchscreen.idc \
-    device/htc/fireball/idc/projector_input.idc:system/usr/idc/projector_input.idc \
-    device/htc/fireball/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc \
-    device/htc/fireball/idc/tv-touchscreen.idc:system/usr/idc/tv-touchscreen.idc
+    device/htc/fireball/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 # NFCEE access control
 ifeq ($(TARGET_BUILD_VARIANT),user)
@@ -61,31 +69,18 @@ PRODUCT_COPY_FILES += \
 
 # NFC Support
 PRODUCT_PACKAGES += \
+    com.android.nfc_extras \
     libnfc \
     libnfc_jni \
     Nfc \
-    Tag \
-    com.android.nfc_extras
+    Tag
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
-    frameworks/base/nfc-extras/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml
+    frameworks/base/nfc-extras/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
+    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml
 
-# Device uses high-density artwork where available
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := hdpi
-PRODUCT_LOCALES += en_US hdpi
-
-# call the proprietary setup
-$(call inherit-product-if-exists, vendor/htc/fireball/fireball-vendor.mk)
-
-# call dalvik heap config
-$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
-
-# Discard inherited values and use our own instead.
-PRODUCT_DEVICE := fireball
-PRODUCT_NAME := fireball
-PRODUCT_BRAND := htc
-PRODUCT_MODEL := Incredible 4G LTE
-PRODUCT_MANUFACTURER := HTC
+# Ramdisk
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    init.target.rc
