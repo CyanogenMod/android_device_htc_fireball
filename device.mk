@@ -73,6 +73,7 @@ PRODUCT_PACKAGES += \
     libnfc \
     libnfc_jni \
     Nfc \
+    nfc.msm8960 \
     Tag
 
 # Permissions
