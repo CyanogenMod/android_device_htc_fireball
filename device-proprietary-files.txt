@@ -22,9 +22,5 @@ lib/libchromatix_s5k6a1gx_default_video.so
 lib/libchromatix_s5k6a1gx_preview.so
 lib/libchromatix_s5k6a1gx_zsl.so
 
-# NFC
-lib/hw/nfc.default.so
-vendor/firmware/libpn544_fw.so
-
 # Sensors
 lib/hw/sensors.default.so
