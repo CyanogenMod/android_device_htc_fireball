@@ -33,7 +33,10 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 # Audio
 PRODUCT_COPY_FILES += \
-    device/htc/fireball/dsp/snd_soc_msm/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x
+    device/htc/fireball/configs/audio_effects.conf:system/vendor/etc/audio_effects.conf \
+    device/htc/fireball/configs/audio_platform_info.xml:system/etc/audio_platform_info.xml \
+    device/htc/fireball/configs/audio_policy.conf:system/etc/audio_policy.conf \
+    device/htc/fireball/configs/mixer_paths.xml:system/etc/mixer_paths.xml
 
 # Input
 PRODUCT_COPY_FILES += \
@@ -83,3 +86,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.target.rc
+
+# Voice processing
+PRODUCT_PACKAGES += \
+    libqcomvoiceprocessing

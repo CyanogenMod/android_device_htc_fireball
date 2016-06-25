@@ -27,7 +27,7 @@
 -include device/htc/s4-common/BoardConfigCommon.mk
 
 # Audio
-BOARD_USES_SEPERATED_VOICE_SPEAKER := true
+USE_CUSTOM_AUDIO_POLICY := 1
 
 # Baseband
 TARGET_BOARD_INFO_FILE ?= device/htc/fireball/board-info.txt
