@@ -22,6 +22,7 @@ persist.audio.fluence.voicecall=true
 persist.audio.fluence.voicerec=false
 ro.qc.sdk.audio.fluencetype=fluence
 use.dedicated.device.for.voip=true
+use.voice.path.for.pcm.voip=true
 
 # RIL
 rild.libargs=-d /dev/smd0
