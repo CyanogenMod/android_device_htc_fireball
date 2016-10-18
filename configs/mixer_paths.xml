@@ -365,7 +365,7 @@
         <ctl name="SLIM_0_RX Channels" value="One" />
         <ctl name="RX1 MIX1 INP1" value="RX1" />
         <ctl name="DAC1 Switch" value="1" />
-        <ctl name="RX1 Digital Volume" value="87" /> <!-- Modified from HTC: 75 -->
+        <ctl name="RX1 Digital Volume" value="84" />
         <ctl name="EAR PA Gain" value="POS_6_DB" />
     </path>
 
@@ -394,9 +394,37 @@
         <ctl name="FENS Enable" value="1" />
     </path>
 
+    <!-- VOIP Earpiece -->
+    <path name="voip-handset-comm">
+        <ctl name="SLIM_0_RX Channels" value="One" />
+        <ctl name="RX1 MIX1 INP1" value="RX1" />
+        <ctl name="DAC1 Switch" value="1" />
+        <ctl name="RX1 Digital Volume" value="84" />
+        <ctl name="EAR PA Gain" value="POS_6_DB" />
+    </path>
+
+    <!-- VOIP Headphones -->
+    <path name="voip-headset-comm">
+        <ctl name="SLIM_0_RX Channels" value="One" />
+        <ctl name="RX1 MIX1 INP1" value="RX1" />
+        <ctl name="RX2 MIX1 INP1" value="RX1" />
+        <ctl name="HPHL DAC Switch" value="1" />
+        <ctl name="RX1 Digital Volume" value="84" />
+        <ctl name="RX2 Digital Volume" value="84" />
+        <ctl name="HPHL Volume" value="8" />
+        <ctl name="HPHR Volume" value="8" />
+    </path>
+
     <!-- VOIP Speaker -->
     <path name="voip-speaker-comm">
-        <path name="speaker" />
+        <ctl name="SLIM_0_RX Channels" value="One" />
+        <ctl name="RX3 MIX1 INP1" value="RX1" />
+        <ctl name="RX4 DSM MUX" value="DSM_INV" />
+        <ctl name="LINEOUT1 Volume" value="8" />
+        <ctl name="LINEOUT3 Volume" value="8" />
+        <ctl name="RX3 Digital Volume" value="90" /> <!-- Modified from HTC: 84 -->
+        <ctl name="RX4 Digital Volume" value="90" /> <!-- Modified from HTC: 84 -->
+        <ctl name="SPK AMP EN Switch" value="1" />
         <ctl name="FENS Enable" value="1" />
     </path>
 
@@ -459,6 +487,16 @@
         <ctl name="ADC2 Volume" value="3" />
     </path>
 
+    <!-- Line -->
+    <path name="speaker-mic">
+        <ctl name="SLIM_0_TX Channels" value="One" />
+        <ctl name="SLIM TX7 MUX" value="DEC6" />
+        <ctl name="DEC6 MUX" value="ADC1" />
+        <ctl name="DEC6 Volume" value="95" />
+        <ctl name="ADC1 Volume" value="3" />
+        <ctl name="MICBIAS3 CAPLESS Switch" value="1" />
+    </path>
+
     <!-- TTY Full Tx -->
     <path name="voice-tty-full-headset-mic">
         <ctl name="SLIM_0_TX Channels" value="One" />
@@ -487,6 +525,21 @@
         <ctl name="ADC2 Volume" value="3" />
     </path>
 
+    <!-- Voice Line -->
+    <path name="voice-speaker-mic">
+        <ctl name="SLIM_0_TX Channels" value="Two" />
+        <ctl name="SLIM TX7 MUX" value="DEC6" />
+        <ctl name="DEC6 MUX" value="ADC1" />
+        <ctl name="DEC6 Volume" value="84" />
+        <ctl name="ADC1 Volume" value="3" />
+        <ctl name="MICBIAS1 CAPLESS Switch" value="1" />
+        <ctl name="SLIM TX8 MUX" value="DEC4" />
+        <ctl name="DEC4 MUX" value="ADC3" />
+        <ctl name="DEC4 Volume" value="84" />
+        <ctl name="ADC3 Volume" value="3" />
+        <ctl name="MICBIAS3 CAPLESS Switch" value="1" />
+    </path>
+
     <!-- Voice Recognition -->
     <path name="voice-rec-mic">
         <ctl name="SLIM_0_TX Channels" value="One" />
@@ -494,6 +547,45 @@
         <ctl name="DEC6 MUX" value="ADC1" />
         <ctl name="DEC6 Volume" value="95" />
         <ctl name="ADC1 Volume" value="3" />
+        <ctl name="MICBIAS3 CAPLESS Switch" value="1" />
+    </path>
+
+    <!-- VOIP Handset -->
+    <path name="voip-main-mic-comm">
+        <ctl name="SLIM_0_TX Channels" value="Two" />
+        <ctl name="SLIM TX7 MUX" value="DEC6" />
+        <ctl name="DEC6 MUX" value="ADC1" />
+        <ctl name="DEC6 Volume" value="84" />
+        <ctl name="ADC1 Volume" value="3" />
+        <ctl name="MICBIAS1 CAPLESS Switch" value="1" />
+        <ctl name="SLIM TX8 MUX" value="DEC4" />
+        <ctl name="DEC4 MUX" value="ADC3" />
+        <ctl name="DEC4 Volume" value="84" />
+        <ctl name="ADC3 Volume" value="3" />
+        <ctl name="MICBIAS3 CAPLESS Switch" value="1" />
+    </path>
+
+    <!-- VOIP Headset -->
+    <path name="voip-headset-mic-comm">
+        <ctl name="SLIM_0_TX Channels" value="One" />
+        <ctl name="SLIM TX7 MUX" value="DEC5" />
+        <ctl name="DEC5 MUX" value="ADC2" />
+        <ctl name="DEC5 Volume" value="87" />
+        <ctl name="ADC2 Volume" value="3" />
+    </path>
+
+    <!-- VOIP Line -->
+    <path name="voip-sub-mic-comm">
+        <ctl name="SLIM_0_TX Channels" value="Two" />
+        <ctl name="SLIM TX7 MUX" value="DEC6" />
+        <ctl name="DEC6 MUX" value="ADC1" />
+        <ctl name="DEC6 Volume" value="84" />
+        <ctl name="ADC1 Volume" value="3" />
+        <ctl name="MICBIAS1 CAPLESS Switch" value="1" />
+        <ctl name="SLIM TX8 MUX" value="DEC4" />
+        <ctl name="DEC4 MUX" value="ADC3" />
+        <ctl name="DEC4 Volume" value="84" />
+        <ctl name="ADC3 Volume" value="3" />
         <ctl name="MICBIAS3 CAPLESS Switch" value="1" />
     </path>
 
