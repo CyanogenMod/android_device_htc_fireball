@@ -21,9 +21,9 @@
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER" acdb_id="15" />
         <device name="SND_DEVICE_OUT_BT_SCO_WB" acdb_id="22" />
         <device name="SND_DEVICE_OUT_AFE_PROXY" acdb_id="10" />
-        <device name="SND_DEVICE_OUT_VOIP_HANDSET" acdb_id="202" />
-        <device name="SND_DEVICE_OUT_VOIP_SPEAKER" acdb_id="604" />
-        <device name="SND_DEVICE_OUT_VOIP_HEADPHONES" acdb_id="401" />
+        <device name="SND_DEVICE_OUT_VOIP_HANDSET" acdb_id="7" />
+        <device name="SND_DEVICE_OUT_VOIP_SPEAKER" acdb_id="15" />
+        <device name="SND_DEVICE_OUT_VOIP_HEADPHONES" acdb_id="10" />
 
         <!-- Input devices -->
         <device name="SND_DEVICE_IN_HANDSET_DMIC" acdb_id="6" />
@@ -33,13 +33,13 @@
         <device name="SND_DEVICE_IN_VOICE_SPEAKER_MIC" acdb_id="13" />
         <device name="SND_DEVICE_IN_CAMCORDER_MIC" acdb_id="507" />
         <device name="SND_DEVICE_IN_VOICE_DMIC" acdb_id="6" />
-        <device name="SND_DEVICE_IN_VOICE_SPEAKER_DMIC" acdb_id="52" />
+        <device name="SND_DEVICE_IN_VOICE_SPEAKER_DMIC" acdb_id="13" />
         <device name="SND_DEVICE_IN_VOICE_REC_MIC" acdb_id="11" />
         <device name="SND_DEVICE_IN_HANDSET_STEREO_DMIC" acdb_id="4" />
         <device name="SND_DEVICE_IN_SPEAKER_STEREO_DMIC" acdb_id="13" />
-        <device name="SND_DEVICE_IN_VOIP_HANDSET_MIC" acdb_id="103" />
-        <device name="SND_DEVICE_IN_VOIP_SPEAKER_MIC" acdb_id="509" />
-        <device name="SND_DEVICE_IN_VOIP_HEADSET_MIC" acdb_id="301" />
+        <device name="SND_DEVICE_IN_VOIP_HANDSET_MIC" acdb_id="6" />
+        <device name="SND_DEVICE_IN_VOIP_SPEAKER_MIC" acdb_id="13" />
+        <device name="SND_DEVICE_IN_VOIP_HEADSET_MIC" acdb_id="8" />
     </acdb_ids>
 
     <backend_names>
@@ -51,20 +51,11 @@
     </pcm_ids>
 
     <device_names>
-        <!-- Output devices -->
-        <device name="SND_DEVICE_OUT_VOIP_HANDSET" alias="handset" />
-        <device name="SND_DEVICE_OUT_VOIP_HEADPHONES" alias="voice-headphones" />
-
         <!-- Input devices -->
-        <device name="SND_DEVICE_IN_HANDSET_STEREO_DMIC" alias="dmic-endfire" />
-        <device name="SND_DEVICE_IN_SPEAKER_DMIC" alias="dmic-endfire" />
-        <device name="SND_DEVICE_IN_SPEAKER_MIC" alias="handset-mic" />
-        <device name="SND_DEVICE_IN_SPEAKER_STEREO_DMIC" alias="dmic-endfire" />
+        <device name="SND_DEVICE_IN_HANDSET_STEREO_DMIC" alias="handset-mic" />
+        <device name="SND_DEVICE_IN_SPEAKER_DMIC" alias="speaker-mic" />
+        <device name="SND_DEVICE_IN_SPEAKER_STEREO_DMIC" alias="speaker-mic" />
         <device name="SND_DEVICE_IN_VOICE_DMIC" alias="dmic-endfire" />
-        <device name="SND_DEVICE_IN_VOICE_SPEAKER_DMIC" alias="dmic-endfire" />
-        <device name="SND_DEVICE_IN_VOICE_SPEAKER_MIC" alias="handset-mic" />
-        <device name="SND_DEVICE_IN_VOIP_HANDSET_MIC" alias="dmic-endfire" />
-        <device name="SND_DEVICE_IN_VOIP_HEADSET_MIC" alias="voice-headset-mic" />
-        <device name="SND_DEVICE_IN_VOIP_SPEAKER_MIC" alias="dmic-endfire" />
+        <device name="SND_DEVICE_IN_VOICE_SPEAKER_DMIC" alias="voice-speaker-mic" />
     </device_names>
 </audio_platform_info>
