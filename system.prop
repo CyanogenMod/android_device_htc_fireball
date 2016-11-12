@@ -33,6 +33,7 @@ ro.telephony.default_cdma_sub=0
 ro.telephony.get_imsi_from_sim=true
 ro.telephony.ril_class=HTCQualcommRIL
 ro.telephony.default_network=10
+ril.subscription.types=RUIM,NV
 
 persist.radio.snapshot_enabled=1
 persist.radio.snapshot_timer=22
